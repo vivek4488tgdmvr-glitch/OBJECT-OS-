@@ -1,0 +1,11 @@
+node_modules
+dist
+.env
+.env.*
+!.env.example
+server/.env
+server/node_modules
+server/prisma/dev.db
+*.sqlite
+*.sqlite-journal
+.DS_Store

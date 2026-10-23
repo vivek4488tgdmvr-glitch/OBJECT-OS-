@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: objectos
+      POSTGRES_PASSWORD: objectos_dev_password
+      POSTGRES_DB: objectos
+    ports:
+      - "5432:5432"
+    volumes:
+      - objectos_pgdata:/var/lib/postgresql/data
+volumes:
+  objectos_pgdata:

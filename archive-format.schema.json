@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://objectos.invalid/schemas/portability-bundle-v1.schema.json",
+  "title": "ObjectOS Portability Bundle v1",
+  "description": "A versioned, checksum-bearing ObjectOS export envelope. This schema does not authenticate the source of an archive.",
+  "type": "object",
+  "required": ["format", "formatVersion", "exportedAt", "records", "integrity"],
+  "properties": {
+    "format": { "const": "objectos-portability-bundle" },
+    "formatVersion": { "const": 1 },
+    "exportedAt": { "type": "string", "format": "date-time" },
+    "records": { "type": "array", "items": { "type": "object" } },
+    "pendingChanges": { "type": "array" },
+    "integrity": {
+      "type": "object",
+      "required": ["algorithm", "digest"],
+      "properties": {
+        "algorithm": { "const": "SHA-256" },
+        "digest": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,23 @@
+{
+  "name": "ObjectOS",
+  "short_name": "ObjectOS",
+  "description": "Find it. Remember it. Keep it.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#060912",
+  "theme_color": "#060912",
+  "icons": [
+    {
+      "src": "/objectos-crimson-eclipse-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/objectos-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
